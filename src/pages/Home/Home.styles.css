@@ -1,0 +1,9 @@
+main {
+  background-image: url('../../assets/hp_14.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

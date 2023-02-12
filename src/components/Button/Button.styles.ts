@@ -13,10 +13,10 @@ const NativeButton = styled.button<ButtonProps>((props) => ({
   fontSize: '1rem',
   fontWeight: 500,
   fontFamily: 'sans-serif',
-  height: '38px',
+  height: '36px',
   width:
     props.size === 'small'
-      ? '40px'
+      ? '80px'
       : props.size === 'medium'
       ? '200px'
       : '250px',

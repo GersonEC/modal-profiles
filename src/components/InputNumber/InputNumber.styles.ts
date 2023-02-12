@@ -6,6 +6,7 @@ const NativeInput = styled.input({
   fontSize: '1.2rem',
   fontWeight: 600,
   textAlign: 'center',
+  marginRight: '20px',
 });
 
 export { NativeInput };

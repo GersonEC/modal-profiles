@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       <Button variant='outline' size='medium' onClick={onButtonClick}>
         OPEN MODAL
       </Button>
-      <Modal isOpen={isOpen} />
+      {isOpen && <Modal isOpen={isOpen} onCloseChange={onButtonClick} />}
     </main>
   );
 };

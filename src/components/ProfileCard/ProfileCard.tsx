@@ -1,35 +1,22 @@
-import styled from 'styled-components';
+import { User } from '../../api/random_users';
+import { Avatar, Email, FullName, Info, Wrapper } from './ProfileCard.styles';
 
 interface Props {
-  avatarImg: string;
-  name: string;
-  surname: string;
-  email: string;
+  user: User;
 }
 
-const ProfileCard: React.FC = () => {
+const ProfileCard: React.FC<Props> = (props: Props) => {
   return (
     <Wrapper>
-      <Avatar src='https://robohash.org/easuscipitvoluptatum.png?size=300x300&set=set1' />
-      <FullName>Pamelia Reginal</FullName>
-      <Email>marietta.lemke@email.com</Email>
+      <Avatar src={props.user.avatar} />
+      <Info>
+        <FullName>
+          {props.user.first_name} {props.user.last_name}
+        </FullName>
+        <Email>{props.user.email}</Email>
+      </Info>
     </Wrapper>
   );
 };
-
-const Wrapper = styled.div({
-  border: 'solid red',
-});
-const FullName = styled.p({
-  border: 'solid green',
-});
-
-const Email = styled.p({
-  border: 'solid blue',
-});
-
-const Avatar = styled.img({
-  border: 'solid orange',
-});
 
 export default ProfileCard;

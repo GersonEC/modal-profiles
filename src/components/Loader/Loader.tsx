@@ -19,7 +19,7 @@ const Loader = () => {
 };
 
 const Wrapper = styled.div({
-  height: '100vh',
+  height: '50vh',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

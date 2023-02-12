@@ -9,6 +9,7 @@ export const COLORS = {
   red: 'red',
   primaryBackground: 'hsl(208deg 100% 98%)',
   transparent: 'transparent',
+  selected: 'hsl(130deg 76% 90%)',
 };
 
 const BREAKPOINTS = {

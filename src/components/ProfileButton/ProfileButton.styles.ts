@@ -9,7 +9,7 @@ const ButtonWrapper = styled.button<Props>((props) => ({
   backgroundColor: props.isSelected ? COLORS.selected : COLORS.white,
   width: '200px',
   height: '50px',
-  borderRadius: '8px',
+  borderRadius: '0 0 0 0',
   fontSize: '1.2rem',
   fontWeight: 600,
   ':hover': {
@@ -18,4 +18,5 @@ const ButtonWrapper = styled.button<Props>((props) => ({
     transition: '0.4s',
   },
 }));
+
 export { ButtonWrapper };

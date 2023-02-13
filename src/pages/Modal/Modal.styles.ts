@@ -37,7 +37,6 @@ const Close = styled.div({
 const SelectedProfile = styled.div({
   position: 'absolute',
   top: '-100px',
-  left: '35%',
 });
 const ErrorMessage = styled.p({
   color: 'red',

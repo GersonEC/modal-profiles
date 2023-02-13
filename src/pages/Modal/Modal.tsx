@@ -18,15 +18,16 @@ import {
 
 interface Props {
   isOpen: boolean;
+  users: User[];
+  setUsers: (newUsers: User[]) => void;
   onCloseChange: () => void;
 }
 
 const initialSize = 1;
 
-const Modal: React.FC<Props> = ({ isOpen, onCloseChange }) => {
+const Modal: React.FC<Props> = ({ isOpen, users, setUsers, onCloseChange }) => {
   const [size, setSize] = useState<number>(initialSize);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [users, setUsers] = useState<User[]>([]);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   const usersQuery = useQuery({
@@ -35,7 +36,7 @@ const Modal: React.FC<Props> = ({ isOpen, onCloseChange }) => {
     onSuccess: (data) => {
       setUsers(data);
     },
-    enabled: isOpen,
+    enabled: isOpen && users.length === 0,
     retry: false,
     refetchOnWindowFocus: false,
   });

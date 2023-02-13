@@ -36,6 +36,9 @@ const Modal: React.FC<Props> = ({ isOpen, users, setUsers, onCloseChange }) => {
     onSuccess: (data) => {
       setUsers(data);
     },
+    onError: (err) => {
+      console.log(err);
+    },
     enabled: isOpen && users.length === 0,
     retry: false,
     refetchOnWindowFocus: false,
@@ -46,6 +49,9 @@ const Modal: React.FC<Props> = ({ isOpen, users, setUsers, onCloseChange }) => {
     onSuccess: (data) => {
       const newUsers = users.concat(data);
       setUsers(newUsers);
+    },
+    onError: (err) => {
+      console.log(err);
     },
   });
 
